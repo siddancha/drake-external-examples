@@ -3,3 +3,4 @@
 /MODULE.bazel.lock
 /bazel-*
 /user.bazelrc
+.venv
