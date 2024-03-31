@@ -1,3 +1,17 @@
+# Install virtualenv
+
+1. Install a Drake tar file into a virtual environment.
+   ```bash
+   mkdir -p .venv
+   tar -xvzf /path/to/drake-xxx.tar.gz -C .venv --strip-components=1
+   python3 -m venv .venv --prompt=drake-examples
+   ```
+
+2. Activate the Drake virtual environment.
+   ```
+   source .venv/bin/activate
+   ```
+
 # Drake External Examples
 
 Examples of how to use [Drake](https://github.com/RobotLocomotion/drake) in your
