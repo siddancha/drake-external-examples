@@ -5,11 +5,11 @@ description = ""
 authors = [
     {name = "Siddharth Ancha", email = "sancha@mit.edu"},
 ]
-# =========================================================================
-# drake dependencies
-# taken from https://github.com/RobotLocomotion/drake/blob/91e3dccea12c6b5fa73ec215d8af0ff4ee7f1876/setup/ubuntu/binary_distribution/packages-jammy.txt
-# =========================================================================
 dependencies = [
+    # =========================================================================
+    # drake dependencies
+    # taken from https://github.com/RobotLocomotion/drake/blob/91e3dccea12c6b5fa73ec215d8af0ff4ee7f1876/setup/ubuntu/binary_distribution/packages-jammy.txt
+    # =========================================================================
     "notebook>=6.5.3",
     "ipywidgets>=8.0.4",
     "lxml>=4.9.2",
@@ -23,6 +23,10 @@ dependencies = [
     "u-msgpack-python>=2.7.2",
     "pyyaml>=6.0",
     "zmq>=0.0.0",
+    # =========================================================================
+    # build dependencies
+    # =========================================================================
+    "setuptools>=69.2.0",
 ]
 requires-python = "<3.12,>=3.10"
 readme = "README.md"
