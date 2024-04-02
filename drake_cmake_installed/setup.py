@@ -5,6 +5,7 @@ References:
 - https://stackoverflow.com/q/75430008/1814274
   https://github.com/libigl/libigl-python-bindings
 - https://stackoverflow.com/q/47599162/1814274
+- https://stackoverflow.com/a/20548189/1814274
 
 Run:
 - pdm:
