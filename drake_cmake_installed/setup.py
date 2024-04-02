@@ -1,5 +1,18 @@
-# References:
-# - https://github.com/pybind/cmake_example (https://github.com/pybind/cmake_example/blob/835e1a81b01d06097ccbb7b8f214ef9bd2d0c159/setup.py)
+"""
+References:
+- https://github.com/pybind/cmake_example
+  https://github.com/pybind/cmake_example/blob/835e1a81b01d06097ccbb7b8f214ef9bd2d0c159/setup.py
+- https://stackoverflow.com/q/75430008/1814274
+  https://github.com/libigl/libigl-python-bindings
+
+Run:
+    - pdm
+      - For development: `pdm install --no-isolation -v`
+      - For production: `pdm install --prod`
+    - pip (not fully sure)
+      - For development: `pip install -e . --no-build-isolation`
+      - For production: `pip install .`
+"""
 
 import os
 import re
@@ -129,13 +142,15 @@ class CMakeBuild(build_ext):
 # The information here can also be placed in setup.cfg - better separation of
 # logic and declaration, and simpler if you include description/version in a file.
 setup(
-    name="cmake_example",
+    name="drake_cmake_installed",
     version="0.0.1",
     author="Dean Moldovan",
     author_email="dean0x7d@gmail.com",
     description="A test project using pybind11 and CMake",
     long_description="",
-    ext_modules=[CMakeExtension("cmake_examples")],
+    ext_modules=[
+        CMakeExtension("simple_bindings"),
+    ],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
     extras_require={"test": ["pytest>=6.0"]},
