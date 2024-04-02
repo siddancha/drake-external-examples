@@ -7,24 +7,24 @@ References:
 - https://stackoverflow.com/q/47599162/1814274
 
 Run:
-    - pdm:
-        - For development: [[ `pdm install -v` ]]
-            - Produces a `build` directory in the root.
-            - Produces `.so` files in `src`.
-            - Doesn't rebuild an already built `build` directory.
-        - For development: [[ `pdm install --prod -v` ]]
-            - Produces a `build` directory in the root.
-            - Produces `.so` files in `src`.
-            - Doesn't rebuild an already built `build` directory.
-    - pip
-        - For development: [[ `pip install -e . -v` ]]
-            - Produces a `build` directory in the root.
-            - Produces `.so` files in source directories.
-            - Doesn't rebuild an already built `build` directory.
-        - For production: [[ `pip install . -v` ]]
-            - Doesn't produces a build directory -- uses a /tmp directory.
-            - Produces `.egg-info` files in `src`.
-            - Rebuilds in a /tmp directory every time.
+- pdm:
+    - For development: [[ `pdm install -v` ]]
+        - Produces a `build` directory in the root.
+        - Produces `.so` files in `src`.
+        - Doesn't rebuild an already built `build` directory.
+    - For development: [[ `pdm install --prod -v` ]]
+        - Produces a `build` directory in the root.
+        - Produces `.so` files in `src`.
+        - Doesn't rebuild an already built `build` directory.
+- pip
+    - For development: [[ `pip install -e . -v` ]]
+        - Produces a `build` directory in the root.
+        - Produces `.so` files in source directories.
+        - Doesn't rebuild an already built `build` directory.
+    - For production: [[ `pip install . -v` ]]
+        - Doesn't produces a build directory -- uses a /tmp directory.
+        - Produces `.egg-info` files in `src`.
+        - Rebuilds in a /tmp directory every time.
 """
 
 import os
