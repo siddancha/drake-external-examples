@@ -4,14 +4,27 @@ References:
   https://github.com/pybind/cmake_example/blob/835e1a81b01d06097ccbb7b8f214ef9bd2d0c159/setup.py
 - https://stackoverflow.com/q/75430008/1814274
   https://github.com/libigl/libigl-python-bindings
+- https://stackoverflow.com/q/47599162/1814274
 
 Run:
-    - pdm
-      - For development: `pdm install --no-isolation -v`
-      - For production: `pdm install --prod`
-    - pip (not fully sure)
-      - For development: `pip install -e . --no-build-isolation`
-      - For production: `pip install .`
+    - pdm:
+        - For development: [[ `pdm install -v` ]]
+            - Produces a `build` directory in the root.
+            - Produces `.so` files in `src`.
+            - Doesn't rebuild an already built `build` directory.
+        - For development: [[ `pdm install --prod -v` ]]
+            - Produces a `build` directory in the root.
+            - Produces `.so` files in `src`.
+            - Doesn't rebuild an already built `build` directory.
+    - pip
+        - For development: [[ `pip install -e . -v` ]]
+            - Produces a `build` directory in the root.
+            - Produces `.so` files in source directories.
+            - Doesn't rebuild an already built `build` directory.
+        - For production: [[ `pip install . -v` ]]
+            - Doesn't produces a build directory -- uses a /tmp directory.
+            - Produces `.egg-info` files in `src`.
+            - Rebuilds in a /tmp directory every time.
 """
 
 import os
